@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SplashActivity!</string>
+    <string name="app_name">站神秘籍</string>
+    <string name="rules">欢迎使用《站神秘籍》，专为关注江苏卫视《一站到底》节目的朋友制作的非官方手机应用。
+       \n\n 第三版新增功能:\n  1.网络对答\n  2.按期下载题库至本地\n  3.按期答题\n  4.支持拼音答题\n  5.题库同步
+        \n\n点击\"设置\"设定本地答题倒计时时长</string>
+    <string name="input_hint">在这里输入答案</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    
+    <string name="title_activity_timer_settings">TimerSettingsActivity</string>
+   
+    <string name="forget"><u>忘记密码</u></string>
+    
+    <string name="action_settings">Settings</string>
+  
+
+</resources>

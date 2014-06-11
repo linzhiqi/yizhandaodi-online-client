@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/dashboard"/> 
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <RadioGroup
+            android:id="@+id/group1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="选择题目难度（尚未开启该功能） :"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/easySetting"
+                android:checked="false"
+                android:text="容易" 
+                android:textSize="15sp"
+                android:textColor="#000000"/>
+
+            <RadioButton
+                android:id="@+id/mediumSetting"
+                android:checked="false"
+                android:text="适中"
+                android:textSize="15sp"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/hardSetting"
+                android:checked="false"
+                android:text="困难"
+                android:textSize="15sp"
+                android:textColor="#000000" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:text="提交更新"
+            android:textColor="#000000" />
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+        <com.google.ads.AdView android:id="@+id/settings_adView"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         ads:adUnitId="a150033e26e665f"
+                         ads:adSize="IAB_BANNER"
+                         ads:loadAdOnCreate="true"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

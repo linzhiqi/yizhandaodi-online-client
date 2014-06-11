@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/welcome_ad"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/dashboard" />
+
+    <TextView
+        android:id="@+id/pk_user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账号信息: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/pk_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#505050" />
+
+    <TextView
+        android:id="@+id/pk_user_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#505050" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/pk_logoff_Btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_selector"
+            android:text="下线"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/pk_loggedin_changepwd_Btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_selector"
+            android:text="修改密码"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/pk_random_pair_Btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_selector"
+            android:text="自由配对"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom" >
+
+        <com.google.ads.AdView
+            android:id="@+id/loggedin_adView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:testDevices = "TEST_EMULATOR, C8263928AC59F12E2EAFBD8BE1F15A34"
+            ads:adUnitId="ca-app-pub-1089499077959134/6961426002"
+            ads:loadAdOnCreate="true" />
+    </LinearLayout>
+
+</LinearLayout>

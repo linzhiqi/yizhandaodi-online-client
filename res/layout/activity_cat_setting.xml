@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/dashboard" />
+
+    <ListView
+        android:id="@+id/catlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000" >
+    </ListView>
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/button_selector"
+        android:text="返回"
+        android:textColor="#000000" />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+        <com.google.ads.AdView android:id="@+id/welcome_adView"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         ads:adUnitId="ca-app-pub-1089499077959134/6961426002"
+                         ads:adSize="SMART_BANNER"
+                         ads:testDevices = "TEST_EMULATOR, C8263928AC59F12E2EAFBD8BE1F15A34"
+                         ads:loadAdOnCreate="true"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

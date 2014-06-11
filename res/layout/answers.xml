@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <include layout="@layout/dashboard"/> 
+
+        <ImageView
+            android:id="@+id/answer_pic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/question_bg" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/answers_check"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/answers_question"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/answers_check"
+                android:layout_marginTop="5dip"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/answers_answer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/answers_question"
+                android:layout_marginTop="5dip"
+                android:hint="@string/input_hint"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip" >
+
+            <Button
+                android:id="@+id/endGame"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/button_selector"
+                android:text="结束答题"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/nextRoundBtn"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/button_selector"
+                android:text="下一题"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+        
+        <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+        <com.google.ads.AdView android:id="@+id/answers_adView"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         ads:adUnitId="ca-app-pub-1089499077959134/6961426002"
+                         ads:adSize="SMART_BANNER"
+                         ads:testDevices = "TEST_EMULATOR, C8263928AC59F12E2EAFBD8BE1F15A34"
+                         ads:loadAdOnCreate="true"/>
+        
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

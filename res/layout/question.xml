@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView_question"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:id="@+id/ViewGroup_question"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <include layout="@layout/dashboard" />
+		<RelativeLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+        
+        <ImageView
+            android:id="@+id/question_pic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/question_bg" />
+        
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/question_pic"
+            android:textColor="#00ff00"
+            android:textSize="20sp"
+            android:background="#000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/checkresult"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question"
+                android:textColor="#ff0000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+            
+
+            <EditText
+                android:id="@+id/input_answer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkresult"
+                android:layout_marginTop="5sp"
+                android:hint="@string/input_hint"
+                android:inputType="text"
+                android:selectAllOnFocus="false"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+            
+            <Button
+                android:id="@+id/passBtn"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:text="放弃该题"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:text="提交答案"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+       
+    </LinearLayout>
+
+</ScrollView>

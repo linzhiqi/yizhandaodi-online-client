@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/dashboard" />
+
+    <ImageView
+        android:id="@+id/competion_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/competition" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/competion_pic"
+            android:layout_weight="1"
+            
+            
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/playPortalBtn"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:padding="10dip"
+                    android:text="进入答题"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+             <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/check_updateBtn"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:padding="10dip"
+                    android:text="同步题库"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+           
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/rulesBtn"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:padding="10dip"
+                    android:text="帮助"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+           
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/exitBtn"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:padding="10dip"
+                    android:text="返回"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+	<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+        <com.google.ads.AdView android:id="@+id/welcome_adView"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         ads:adUnitId="ca-app-pub-1089499077959134/6961426002"
+                         ads:adSize="SMART_BANNER"
+                         ads:testDevices = "TEST_EMULATOR, C8263928AC59F12E2EAFBD8BE1F15A34"
+                         ads:loadAdOnCreate="true"/>
+        
+    </LinearLayout>
+</LinearLayout>

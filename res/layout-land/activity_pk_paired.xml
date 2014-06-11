@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/welcome_ad"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/dashboard" />
+    <TextView
+                android:id="@+id/pk_competitor_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="对手信息: "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#505050" />
+    <TextView
+                android:id="@+id/pk_competitor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#505050" />
+    
+    <TextView
+                android:id="@+id/pk_competitor_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#505050" />
+    
+    <TextView
+                android:id="@+id/pk_paired_iswinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000" />
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/pk_cancel_pair_Btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_selector"
+            android:text="取消配对"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/pk_game_ready_Btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_selector"
+            android:text="准备就绪"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/welcome_ad"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/dashboard" />
+
+    <ImageView
+        android:id="@+id/competion_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/competition" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/localGameBtn"
+                    android:layout_width="150dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:padding="5dip"
+                    android:text="本地练习"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/onlineGameBtn"
+                    android:layout_width="150dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:padding="5dip"
+                    android:text="联网PK"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>       
+
+        
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="10dip"
+                android:layout_gravity="center"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/exitBtn"
+                    android:layout_width="150dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:padding="5dip"
+                    android:text="退出"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        
+    </LinearLayout>
+     <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+        <com.google.ads.AdView android:id="@+id/main_adView"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         ads:adUnitId="ca-app-pub-1089499077959134/6961426002"
+                         ads:adSize="SMART_BANNER"
+                         ads:testDevices = "TEST_EMULATOR, C8263928AC59F12E2EAFBD8BE1F15A34"
+                         ads:loadAdOnCreate="true"/>
+        
+    </LinearLayout>
+
+</LinearLayout>
